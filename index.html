@@ -451,8 +451,14 @@
 				}
 
 				$.ajax(settings).done(function (response) {
-				  console.log(response);
+				 // console.log(response);
 				});
+				alert("Your message has been sent. Thanks.");
+				
+				document.getElementById("contactName").value = "";
+				document.getElementById("contactEmail").value = "";
+				document.getElementById("contactNumber").value = "";
+				document.getElementById("contactMsg").value = "";
 			}
 		</script>
 		<!-- //here ends scrolling icon -->
