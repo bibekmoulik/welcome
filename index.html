@@ -373,12 +373,12 @@
 				<span class="about-top-w3">Send me a message</span>
 				<h4 class="title-w3ls">Contact Me</h4>
 				<div class="col-md-5 contact-agileits-w3layouts">
-					<form action="#" method="post">
-						<input type="text" name="Your Name" placeholder="Name" required="" />
-						<input type="email" name="Your Email" placeholder="Email" required="" />
-						<input type="text" Name="Phone Number" placeholder="Number" required=""/>
-						<textarea name="Message" placeholder="Message" required=""></textarea>
-						<input type="submit" value="Submit">
+					<form>
+						<input type="text" name="Your Name" placeholder="Name" required="" id="contactName"/>
+						<input type="email" name="Your Email" placeholder="Email" required="" id="contactEmail"/>
+						<input type="text" Name="Phone Number" placeholder="Number" required="" id="contactNumber"/>
+						<textarea name="Message" placeholder="Message" required="" id="contactMsg"></textarea>
+						<input type="button" value="Submit" onclick="sendSMS()"/>
 					</form>
 					<h5 class="sub">• &nbsp; <u>Looking for Address</u></h5>
 					<p><span>Location</span> : Adar Para, Jalpaiguri, West Bengal, India.</p>
@@ -417,17 +417,43 @@
 	<!-- ******************************************************************************************************************** -->
 	<!-- ************************************************* copyright footer ************************************************* -->
 	<!-- ******************************************************************************************************************** -->
-		<div class="footer">
+	<!--	<div class="footer">
 			<div class="container">
 				<p>© 2017 Elegant Resume. All rights reserved | Design by <a href="http://w3layouts.com">W3layouts</a></p>
 			</div>
-		</div>
+		</div> -->
 		<!-- //footer -->
 		<script src="js/bars.js"></script>
 
 		<!-- here stars scrolling icon -->
 		<script type="text/javascript">
 			$(document).ready(function() { $().UItoTop({ easingType: 'easeOutQuart' });});
+		</script>
+		<script type="text/javascript">
+			function sendSMS()
+			{
+				var cName = "Name: " + document.getElementById("contactName").value;
+				var cEmail = "Email ID: " + document.getElementById("contactEmail").value;
+				var cNumber = "Number: " + document.getElementById("contactNumber").value;
+				var cMsg = "%0a" + document.getElementById("contactMsg").value;
+				
+				var cMobileInfo  = "&mobiles=7730025647";
+				var cAuthKeyInfo = "&authkey=197344AnWF69pFnt5a7c6519";
+				var cCountryInfo = "&country=91";
+				var cMessageInfo = "&message="+cName+"%0a"+cEmail+"%0a"+cNumber+"%0a"+cMsg;
+				
+				var settings = {
+				  "async": true,
+				  "crossDomain": true,
+				  "url": "http://api.msg91.com/api/sendhttp.php?sender=MSGIND&route=4"+cMobileInfo+cAuthKeyInfo+cCountryInfo+cMessageInfo,
+				  "method": "GET",
+				  "headers": {}
+				}
+
+				$.ajax(settings).done(function (response) {
+				  console.log(response);
+				});
+			}
 		</script>
 		<!-- //here ends scrolling icon -->
 	</body>
