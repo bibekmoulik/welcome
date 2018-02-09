@@ -1,3 +1,32 @@
+function validateMessage()
+{
+	if (document.getElementById("contactName").value == "" ||
+		document.getElementById("contactEmail").value == "" ||
+		document.getElementById("contactNumber").value == "" ||
+		document.getElementById("contactMsg").value == "")
+	{
+		alert("Please fill all the fields");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function clearForm()
+{
+	document.getElementById("contactName").value = "";
+	document.getElementById("contactEmail").value = "";
+	document.getElementById("contactNumber").value = "";
+	document.getElementById("contactMsg").value = "";
+	
+	document.getElementById("contactName").placeholder = "Your Name";
+	document.getElementById("contactEmail").placeholder = "Your Email ID";
+	document.getElementById("contactNumber").placeholder = "Your Contact Number";
+	document.getElementById("contactMsg").placeholder = "Type your message here..";
+}
+
 function sendMail()
 {
 	var settings = {
@@ -28,6 +57,8 @@ function sendMail()
 	$.ajax(settings).done(function(response) {
 		console.log(response); // if you're into that sorta thing
 	});
+	
+	clearForm();
 }
 
 function sendSMS()
@@ -55,8 +86,5 @@ function sendSMS()
 	});
 	alert("Your message has been sent. Thanks.");
 	
-	document.getElementById("contactName").value = "";
-	document.getElementById("contactEmail").value = "";
-	document.getElementById("contactNumber").value = "";
-	document.getElementById("contactMsg").value = "";
+	clearForm();
 }
