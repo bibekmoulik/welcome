@@ -55,7 +55,7 @@ function sendSMS()
 	var settings = {
 	  "async": true,
 	  "crossDomain": true,
-	  "url": "http://api.msg91.com/api/sendhttp.php?sender=MSGIND&route=4"+cMobileInfo+cAuthKeyInfo+cCountryInfo+cMessageInfo,
+	  "url": "https://api.msg91.com/api/sendhttp.php?sender=MSGIND&route=4"+cMobileInfo+cAuthKeyInfo+cCountryInfo+cMessageInfo,
 	  "method": "GET",
 	  "headers": {}
 	}
