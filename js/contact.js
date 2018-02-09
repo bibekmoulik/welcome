@@ -28,7 +28,7 @@ function clearForm()
 	//document.getElementById("contactEmail").value = "";
 	//document.getElementById("contactNumber").value = "";
 	document.getElementById("contactMsg").value = "";
-	document.getElementById("contactMsg").placeholder = "Write your message here.."; 
+	document.getElementById("contactMsg").placeholder = "Write your message here..";
 }
 
 function sendMail()
