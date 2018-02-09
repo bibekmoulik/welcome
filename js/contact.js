@@ -28,8 +28,8 @@ function sendMessage()
 {
 	if (validateMessage())
 	{
-		//sendSMS();
-		sendMail();
+		sendSMS();
+		//sendMail();
 		alert("Thanks you contacting me.\nYour message has been sent.");
 		clearForm();
 	}
