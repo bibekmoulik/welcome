@@ -1,9 +1,6 @@
 function validateMessage()
 {
-	if(document.getElementById("contactName").value == "" ||
-	   document.getElementById("contactEmail").value == "" ||
-	   document.getElementById("contactNumber").value = "" ||
-	   document.getElementById("contactMsg").value = "")
+	if(document.getElementById("contactName").value == "" || document.getElementById("contactEmail").value == "" || document.getElementById("contactNumber").value = "" || document.getElementById("contactMsg").value = "")
 	{
 		alert("Fields cannot be blank");
 		return false;
