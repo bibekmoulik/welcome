@@ -378,7 +378,7 @@
 						<input type="email" name="Your Email" placeholder="Email" required="" id="contactEmail"/>
 						<input type="text" Name="Phone Number" placeholder="Number" required="" id="contactNumber"/>
 						<textarea name="Message" placeholder="Message" required="" id="contactMsg"></textarea>
-						<input type="button" value="Submit" onclick="sendSMS()"/>
+						<input type="button" value="Submit" onclick="sendMail()"/>
 					</form>
 					<h5 class="sub">• &nbsp; <u>Looking for Address</u></h5>
 					<p><span>Location</span> : Adar Para, Jalpaiguri, West Bengal, India.</p>
@@ -430,6 +430,39 @@
 			$(document).ready(function() { $().UItoTop({ easingType: 'easeOutQuart' });});
 		</script>
 		<script type="text/javascript">
+			
+			function sendMail()
+			{
+				var settings = {
+						"async": true,
+						"crossDomain": true,
+						type: 'POST',
+						url: 'https://mandrillapp.com/api/1.0/messages/send.json',
+						data: 
+							{
+								'key': 'e5b80d11-7f29-4735-834b-6c94aa198c35',
+								'message': 
+										{
+											'from_email': 'bibek.moulik@cognizant.com',
+											'to': [
+													{
+													'email': 'bibek.moulik@cognizant.com',
+													'name': 'Bibek',
+													'type': 'to'
+													}
+													],
+											'autotext': 'true',
+											'subject': 'YOUR SUBJECT HERE!',
+											'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
+										}
+							}
+				}
+				
+				$.ajax(settings).done(function(response) {
+					console.log(response); // if you're into that sorta thing
+				});
+			}
+			
 			function sendSMS()
 			{
 				var cName = "Name: " + document.getElementById("contactName").value;
@@ -450,8 +483,6 @@
 				  "headers": {}
 				}
 				
-				var response;
-
 				$.ajax(settings).done(function (response) {
 				 // console.log(response);
 				});
