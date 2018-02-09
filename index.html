@@ -373,15 +373,24 @@
 				<span class="about-top-w3">Send me a message</span>
 				<h4 class="title-w3ls">Contact Me</h4>
 				<div class="col-md-5 contact-agileits-w3layouts">
-					<form>
-						<input type="text" name="Your Name" placeholder="Name" required="" id="contactName"/>
-						<input type="email" name="Your Email" placeholder="Email" required="" id="contactEmail"/>
-						<input type="text" Name="Phone Number" placeholder="Number" required="" id="contactNumber"/>
-						<textarea name="Message" placeholder="Message" required="" id="contactMsg"></textarea>
-						<input type="button" value="Submit" onclick="sendMail()"/>
-					</form>
-					<h5 class="sub">• &nbsp; <u>Looking for Address</u></h5>
-					<p><span>Location</span> : Adar Para, Jalpaiguri, West Bengal, India.</p>
+					<form onsubmit="sendSMS(); return false;" method="post">
+ 						<input type="text" name="Your Name" placeholder="Write your name here" required="" />
+ 						<input type="email" name="Your Email" placeholder="Write your Email ID here" required="" />
+ 						<input type="text" Name="Phone Number" placeholder="Write your contact number here" required=""/>
+ 						<textarea name="Message" placeholder="Write your message here.." required=""></textarea>
+ 						<input type="submit" value="Send Message">
+ 					</form>
+					
+					<!--form action="#" method="post">
+						<input type="text" name="Your Name" placeholder="Your Name" required="" id="contactName"/>
+						<input type="email" name="Your Email" placeholder="Your Email ID" required="" id="contactEmail"/>
+						<input type="text" Name="Phone Number" placeholder="Your Contact Number" required="" id="contactNumber"/>
+						<textarea name="Message" placeholder="Type your message here.." required="" id="contactMsg"></textarea>
+						<input type="button" value="Send Message" onclick="sendMail()"/>
+					</form-->
+					<h5 class="sub">• &nbsp; <u>Looking for my address</u></h5>
+					<p><span>Location</span> : Adar Para, Jalpaiguri,</p>
+					<p><span></span> &nbsp; West Bengal, India.</p>
 					<p><span>Phone</span> : +91-77300-25647</p>
 					<p><span>Email</span><a href="mailto:bibekmoulik@gmail.com"> : bibekmoulik@gmail.com</a></p>
 				</div>
@@ -390,7 +399,7 @@
 					<div id="map"></div>
 					
 					<!-- Map-JavaScript -->
-					<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
+					<!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script-->
 					<script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=<YOUR_API_KEY>&callback=initMap"></script>
 					<script type="text/javascript">
 						google.maps.event.addDomListener(window, 'load', init);
