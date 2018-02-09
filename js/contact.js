@@ -1,9 +1,37 @@
+function validateMessage()
+{
+	if(document.getElementById("contactName").value == "" ||
+	   document.getElementById("contactEmail").value == "" ||
+	   document.getElementById("contactNumber").value = "" ||
+	   document.getElementById("contactMsg").value = "")
+	{
+		alert("Fields cannot be blank");
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+
+function sendMessage()
+{
+	if (validateMessage())
+	{
+		//sendSMS();
+		sendMail();
+		alert("Thanks you contacting me.\nYour message has been sent.");
+		clearForm();
+	}
+}
+
 function clearForm()
 {
-	document.getElementById("contactName").value = "";
-	document.getElementById("contactEmail").value = "";
-	document.getElementById("contactNumber").value = "";
+	//document.getElementById("contactName").value = "";
+	//document.getElementById("contactEmail").value = "";
+	//document.getElementById("contactNumber").value = "";
 	document.getElementById("contactMsg").value = "";
+	document.getElementById("contactMsg").placeholder = "Write your message here..";
 }
 
 function sendMail()
@@ -36,8 +64,6 @@ function sendMail()
 	$.ajax(settings).done(function(response) {
 		console.log(response); // if you're into that sorta thing
 	});
-	
-	clearForm();
 }
 
 function sendSMS()
@@ -63,7 +89,4 @@ function sendSMS()
 	$.ajax(settings).done(function (response) {
 	 // console.log(response);
 	});
-	alert("Your message has been sent. Thanks.");
-	
-	clearForm();
 }
