@@ -1,14 +1,27 @@
 function validateMessage()
 {
-	if(document.getElementById("contactName").value == "") || (document.getElementById("contactEmail").value == "") || (document.getElementById("contactNumber").value = "") || (document.getElementById("contactMsg").value = "")
+	if(document.getElementById("contactName").value == "") 
 	{
-		alert("Fields cannot be blank");
+		alert("Please enter your name");
 		return false;
 	}
-	else
+	if(document.getElementById("contactEmail").value == "") 
 	{
-		return true;
+		alert("Please enter your Email ID");
+		return false;
 	}
+	if(document.getElementById("contactNumber").value == "") 
+	{
+		alert("Please enter your contact number");
+		return false;
+	}
+	if(document.getElementById("contactMsg").value == "") 
+	{
+		alert("Please enter your message");
+		return false;
+	}
+	
+	return true;
 }
 
 function sendMessage()
