@@ -391,7 +391,7 @@ ul.address-text b {
 	font-family: 'Oswald', sans-serif;
 	letter-spacing: 1px;
 }
-.banner-right-w3-agileits iframe {
+.banner-right-w3-agileits video {
     outline: none;
     border: none;
     width: 100%;
@@ -965,7 +965,7 @@ a.lightbox img:hover {
 	.name h2 {
 		font-size: 42px;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 332px;
 	}
 	.banner {
@@ -987,7 +987,7 @@ a.lightbox img:hover {
 		top: 29em;
 		left: 12.58em;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 300px;
 	}
 	.banner {
@@ -1050,7 +1050,7 @@ a.lightbox img:hover {
 		font-size: 1.3em;
 		margin-bottom: 1.2em;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 298px;
 	}
 	.work-info h4 {
@@ -1089,7 +1089,7 @@ a.lightbox img:hover {
 		top: 25.5em;
 		left: 5.8em;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 301px;
 	}
 	.banner {
@@ -1182,7 +1182,7 @@ a.lightbox img:hover {
 		background: url(../images/banner.jpg) no-repeat -96px 0px;
 		background-size: cover;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 297px;
 	}
 	.container.banner-drop.nav-open {
@@ -1231,7 +1231,7 @@ a.lightbox img:hover {
 		width: 35px;
 		height: 35px;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 280px;
 	}
 	.banner {
@@ -1276,7 +1276,7 @@ a.lightbox img:hover {
 	.banner-left-wthree img {
 		width: 39%;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 277px;
 	}
 	.work-right.work-right2 {
@@ -1365,7 +1365,7 @@ a.lightbox img:hover {
 		background: url(../images/banner.jpg) no-repeat -33px 0px;
 		background-size: cover;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 265px;
 	}
 	h4.title-w3ls {
@@ -1399,7 +1399,7 @@ a.lightbox img:hover {
 		left: 2em;
 		width: 92%;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 261px;
 	}
 	.work-info h5 {
@@ -1523,7 +1523,7 @@ a.lightbox img:hover {
 		background-size: cover;
 		margin-bottom: 32.8em;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 215px;
 	}
 	span.about-top-w3 {
@@ -1722,7 +1722,7 @@ a.lightbox img:hover {
 	.banner-right-w3-agileits {
 		padding: 25px;
 	}
-	.banner-right-w3-agileits iframe {
+	.banner-right-w3-agileits video {
 		height: 170px;
 	}
 	ul.address li ul.address-text li {
