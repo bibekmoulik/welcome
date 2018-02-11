@@ -28,9 +28,16 @@ function sendMessage()
 {
 	if (validateMessage())
 	{
-		//sendSMS();
-		sendMail();
-		alert("Thanks you contacting me.\nYour message has been sent.");
+		try
+		{
+			sendSMS();
+			//sendMail();
+			alert("Thanks you contacting me.\nYour message has been sent.");
+		}
+		catch(err)
+		{
+			alert("Not able to send message now. Please try again.\nSorry for the invonvenience.");
+		}
 		clearForm();
 	}
 }
