@@ -403,42 +403,25 @@
 				
 				<div class="col-md-7 contact-map-right">
 					<div id="map"></div>
-					<script>
-      function initMap() {
-        // Create a map object and specify the DOM element for display.
-	      var myLatLng = {lat: 26.509477, lng: 88.725387};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          center: myLatLng,
-          zoom: 11
-        });
-	      var marker = new google.maps.Marker({
-          map: map,
-          position: myLatLng,
-          title: 'Hello World!'
-        });
-      }
-
-    </script>
-    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2BcepXNuOlLuuNz156M0vxs9T7Yntf0&callback=initMap"></script>
 					<!-- Map-JavaScript -->
-					<!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script-->
-					<!--script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2BcepXNuOlLuuNz156M0vxs9T7Yntf0&callback=initMap"></script>
 					<script type="text/javascript">
-						//google.maps.event.addDomListener(window, 'load', init);
-						function init() {
-							var mapOptions = {
-								zoom: 11,
-								center: new google.maps.LatLng(26.509477, 88.725387),
-							};
-							
-							var mapElement = document.getElementById('map');
-							var map = new google.maps.Map(mapElement, mapOptions);
-							var marker = new google.maps.Marker({
-								position: new google.maps.LatLng(26.509477, 88.725387),
-								map: map,
+						function initMap() 
+						{
+						      // Create a map object and specify the DOM element for display.
+						      var myLatLng = {lat: 26.509477, lng: 88.725387};
+						      var map = new google.maps.Map(document.getElementById('map'), {
+							  center: myLatLng,
+							  zoom: 13
 							});
-						}
-					</script-->
+							  
+							var marker = new google.maps.Marker({
+							  map: map,
+							  position: myLatLng,
+							  title: 'Moulik Bari'
+							});
+						      }
+					    </script>
+					    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2BcepXNuOlLuuNz156M0vxs9T7Yntf0&callback=initMap"></script>
 					<!-- //Map-JavaScript -->
 				</div>
 			</div>
