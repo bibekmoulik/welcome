@@ -53,29 +53,33 @@ function clearForm()
 
 function sendMail()
 {
+	var cName = "Name: " + document.getElementById("contactName").value;
+	var cEmail = "Email ID: " + document.getElementById("contactEmail").value;
+	var cNumber = "Number: " + document.getElementById("contactNumber").value;
+	var cMsg = "\n" + document.getElementById("contactMsg").value;
+	
 	var settings = {
 			"async": true,
 			"crossDomain": true,
 			type: 'POST',
 			url: 'https://mandrillapp.com/api/1.0/messages/send.json',
 			data: 
+			{
+			 	"key": "JPm4BtCdhDmopGfzlaY_dg",
+			 	"message": 
 				{
-					'key': 'e5b80d11-7f29-4735-834b-6c94aa198c35',
-					'message': 
-							{
-								'from_email': 'bibek.moulik@cognizant.com',
-								'to': [
-										{
-										'email': 'bibek.moulik@cognizant.com',
-										'name': 'Bibek',
-										'type': 'to'
-										}
-										],
-								'autotext': 'true',
-								'subject': 'YOUR SUBJECT HERE!',
-								'html': 'YOUR EMAIL CONTENT HERE! YOU CAN USE HTML!'
-							}
-				}
+					"text": cName+"\n"+cEmail+"\n"+cNumber+"\n"+cMsg,
+					"subject": "Message from website",
+					"from_email": "bibekmoulik@gmail.com",
+					"from_name": "Bibek Name",
+					"to":
+					    [{
+						"email": "bibekmoulik@gmail.com",
+						"name": "Bibek Moulik",
+						"type": "to"
+					    }]
+				 }
+			}
 	}
 	
 	$.ajax(settings).done(function(response) {
