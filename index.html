@@ -346,7 +346,7 @@
 						<h3> <a href="https://www.google.co.in/search?q=fanindra+deb+institution+jalpaiguri" target="_blank"><img src="images/fdi_logo.jpg" alt="" style="width:80px; height:80px;"/> Fanindra Dev Institution </a></h3>
 					</div>
 					<div class="col-md-6 work-right"> 
-						<h5><span class="glyphicon glyphicon-education"> </span> 2000 - 2007 </h5>
+						<h5><span class="glyphicon glyphicon-education"> </span> 2000-2007 </h5>
 						<p> After completing primary education, I took admission to Fanindra Dev Institution (FDI), Jalpaiguri. This is a renowned school of Jalpaiguri, having years of glorious history. I appeared in the board exam (Madhyamik/Secondary) from this school and passed it with distinction. I have a lot of memories connected to this school. 
 						<br/> <a href="docs/Result_Madhyamik.png" target="_blank"><i>My Secondary Result</i></a> </p>
 					</div>
@@ -403,10 +403,20 @@
 				
 				<div class="col-md-7 contact-map-right">
 					<div id="map"></div>
-					
+					<script>
+      function initMap() {
+        // Create a map object and specify the DOM element for display.
+        var map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: -34.397, lng: 150.644},
+          zoom: 8
+        });
+      }
+
+    </script>
+    <script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2BcepXNuOlLuuNz156M0vxs9T7Yntf0&callback=initMap"></script>
 					<!-- Map-JavaScript -->
 					<!--script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script-->
-					<script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2BcepXNuOlLuuNz156M0vxs9T7Yntf0&callback=initMap"></script>
+					<!--script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDc2BcepXNuOlLuuNz156M0vxs9T7Yntf0&callback=initMap"></script>
 					<script type="text/javascript">
 						google.maps.event.addDomListener(window, 'load', init);
 						function init() {
@@ -422,7 +432,7 @@
 								map: map,
 							});
 						}
-					</script>
+					</script-->
 					<!-- //Map-JavaScript -->
 				</div>
 			</div>
