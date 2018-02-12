@@ -2054,3 +2054,11 @@ a.lightbox img:hover {
 .career, .skills, .contact {
 	background: #f5f5f5;
 }
+
+.resume{
+	color: #ffffff;
+}
+
+.resume:hover{
+	color: #00bdbd;
+}
