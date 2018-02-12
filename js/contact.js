@@ -97,7 +97,7 @@ function sendSMS()
 	var cMobileInfo  = "&mobiles=7730025647";
 	var cAuthKeyInfo = "&authkey=197344A0viR9xB5a7c7c0a";
 	var cCountryInfo = "&country=91";
-	var cMessageInfo = "&message="+cName+"%0a"+cEmail+"%0a"+cNumber+"%0a"+cMsg;
+	var cMessageInfo = "&message="+cName+"%0a"+cEmail+"%0a"+cNumber+"%0a"+cMsg.replace(/\n/g,"%0a");
 	
 	var settings = {
 	  "async": true,
