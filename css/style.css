@@ -347,6 +347,7 @@ ul.top-links li a i.fa-google-plus:hover{
     float: left;
     width: 49%;
     background: #000;
+    opacity: 0.5;
     padding: 30px 50px;
 }
 .banner-right-w3-agileits {
