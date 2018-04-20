@@ -517,12 +517,22 @@ h5.sub {
 .work {
     background: #000;
 }
+.work-info-border-left{
+	border-right: 1px solid #999;
+}
+.work-info-border-right{
+	border-left: 1px solid #999;
+}
+
+
+
+
+
 .work-left {
     text-align: right;
     padding: 3em 5em 0 0;
 }
 .work-right {
-    border-left: 1px solid #999;
     padding: 2.5em 0 2em 6em;
 }
 .work-info h4 {
@@ -632,6 +642,7 @@ h5.sub {
 }
 .news-left img{
 	width:100%;
+
 }
 .news-right {
     padding: 3.68em 2em 3.5em 2em;
@@ -655,6 +666,7 @@ h5.sub {
 	-o-transition:.5s ease-in-out;
 	-ms-transition:.5s ease-in-out;
 }
+
 .news-right a h4:hover{
 	color:#ec1944;
 	transition:.5s ease-in-out;
