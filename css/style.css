@@ -655,9 +655,6 @@ h5.sub {
 	-o-transition:.5s ease-in-out;
 	-ms-transition:.5s ease-in-out;
 }
-.news-right p {
-    line-height: 100%;
-}
 .news-right a h4:hover{
 	color:#ec1944;
 	transition:.5s ease-in-out;
@@ -1119,9 +1116,7 @@ a.lightbox img:hover {
 		font-size: 1.2em;
 		margin-bottom: .66em;
 	}
-	.news-right p {
-		line-height: 100%;
-	}.para-w3-agile {
+	.para-w3-agile {
 		font-size: 14px;
 	}
 	.news-right {
@@ -1650,9 +1645,6 @@ a.lightbox img:hover {
 	.news-right a h4 {
 		font-size: 15px;
 	}
-	.news-right p {
-		line-height: 100%;
-	}
 	.contact-agileits-w3layouts input[type="text"], .contact-agileits-w3layouts input[type="email"], .contact-agileits-w3layouts textarea {
 		font-size: 13.5px;
 	}
@@ -1897,9 +1889,6 @@ a.lightbox img:hover {
 	}
 	.work-info p {
 		line-height: 28px;
-	}
-	.news-right p {
-		line-height: 100%;
 	}
 	.contact-agileits-w3layouts {
 		padding: 20px;
